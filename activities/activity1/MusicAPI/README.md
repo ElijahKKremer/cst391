@@ -65,7 +65,7 @@ GREETING=Hello from the environment file. Be kind to the environment!
 ---
 ## Video Recording
 
-- [Video Recording](FIX THISSSSSSS)
+- [Video Recording](https://www.loom.com/share/9558e29bfee74726897b9bd782ae8b63)
 
 ## Conculsion
 Activity 1, Markdown introduction
