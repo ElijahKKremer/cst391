@@ -68,5 +68,8 @@ GREETING=Hello from the environment file. Be kind to the environment!
 - [Video Recording](https://www.loom.com/share/9558e29bfee74726897b9bd782ae8b63)
 
 ## Conculsion
-Activity 1, Markdown introduction
- - ...
+Activity 1 is a sample application designed to interact with a MySQL database, showcasing how backend services can be structured using a Model-View-Controller (MVC) architecture.
+- Model: Handles data logic and communicates directly with the database.
+- View: Represents the user interface — what users see and interact with.
+- Controller: Acts as the intermediary, managing application flow and coordinating between the model and view. This project leverages a variety of tools and technologies to demonstrate clean architecture, modular design, and effective data handling
+________________________
