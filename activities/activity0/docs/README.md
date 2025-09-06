@@ -1,73 +1,87 @@
 # Activity 0
 
+- Author: Elijah Kremer
+- Date: 6 Sep 2025
+
 ## Introduction
 
 - This is **Activity 0** With this activity we have begun our progress for this course. set up the necessary software for development, and created `hello`, `helloex`, and started `MusicAPI`. 
 
+- This activity will install the following tools to execute a simple **Hello World** [Representational State Transfer (RESTful)](https://en.wikipedia.org/wiki/REST) [Application Programming Interface (API)](https://en.wikipedia.org/wiki/API)
+     - [Express](https://expressjs.com/) - backend web application framework for building RESTful APIS
+     - [NodeJS](https://nodejs.org/en) - open-source, cross-platform JavaScript runtime environment allowing developers to create servers, web applications, command line tools and scripts
+     - [Visual Studio Code](https://code.visualstudio.com/) - integrated development environment, code editor
+     - [TypeScript](https://www.typescriptlang.org/) - Adds types to JavaScript
+- Three applications will be executing, node, express and TypeScript application
 
 
-## Links / Images
-these are the tutorial files that were demonstrated for me.
+Three applications will be executing, node, express and TypeScript application
 
-Also included are the Activity 0 Images.
 
-- [fred](https://gitlab.com/bobby.estey/wikibob/-/blob/master/README.md)
-- [Grand Canyon University](https://www.gcu.edu/)
 
-![America's Flagship Seal](https://gitlab.com/bobby.estey/wikibob/-/raw/master/docs/icons/cv64AmericasFlagShip100x100.png)
-![America's Flagship Seal](https://gitlab.com/bobby.estey/wikibob/-/raw/master/docs/icons/cv64AmericasFlagShip100x100.png "America's Flag Ship")
+##  Images
+ included are the Activity 0 Images.
 
+ ## Installation Verification
+ ![Install](images/a02.png)
+
+## NodeJS "Hello World" Application
+
+- The following commands execute the **Hello World** Application
+```
+cd hello
+gedit app.js &
+node app.js
+```
+## NodeJS with TypeScript "Hello TypeScript" Application
+
+```
+mkdir MusicAPI
+cd MusicAPI/
+sudo npm init     <- accept all the defaults
+sudo npm i express
+sudo npm i --save-dev typescript @types/express
+mkdir src
+cd src/
+cp ../../../../docs/topic01/activity0_app.ts app.ts
+sudo npm i typescript@latest -g
+touch tsconfig.json
+sudo tsc --init
+sudo npm install -g ts-node
+sudo ts-node app.ts 
+```
+
+- Hello World localhost
 ![hello](images/HelloWorld.png)
 
-![hello](images/nodem.png)
-![hello](images/Typescripts.png)
-![hello](images/a01.png)
-![hello](images/a02.png)
-![hello](images/a03.png)
+
+- ## Express "Hello Express" Application
+
+```
+cd helloex
+npm init     <- accept all the defaults
+sudo npm install express
+node app.js
+sudo npm install -g nodemon
+sudo nodemon app.js
+```
 _________________
 
+- ### This images shows the `nodem` application executing on port 3000
+![](images/nodem.png)
+_____________________
 
+- ### This images shows the `app.js` file 
+![](images/a01.png)
+_____________________
 
-## Tables
-|First Name|Last Name|
-|--|--|
-|Elijah|Kremer|
-|John|Doe|
+- ### This images shows the `app.ts` file
+![](images/a03.png)
+_________________
 
-```java
-// Java Example
-public class CodeBlock {
-    public static void main(String[] args) {
-        System.out.println("Code Block Example");
-    }
-}
-```
+## Conclusion
 
-```mermaid
----
-title: MermaidJS - Class Diagram - Animal example
----
-classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
-```
+- Activity 0 shows how to install NodeJS, Express, Visual Studio Code and TypeScript.  Also three programs were executed:
+     - NodeJS **Hello World** Application
+     - Express **Hello Express** Application
+     - TypeScript **Hello TypeScript** Application
