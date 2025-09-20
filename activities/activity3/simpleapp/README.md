@@ -15,7 +15,7 @@ This application is a simple app to demonstrate how to use angular. It has a sim
 ### Screenshots
 
 Initial application page
-![](/activities/activity3/screenshots/initial_page.png)
+![](/activities/activity3/screenshots/simple.png)
 
 Bootstrap table using dev tools to show responsiveness at a small screen.
 ![](/activities/activity3/screenshots/small_table.png)
