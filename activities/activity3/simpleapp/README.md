@@ -40,7 +40,7 @@ Screenshot of the dev tools console after clicking buy.
 The @Input decorator in `info.component.ts` allows the component to receive data from its parent component. In the info component's case, it is used for the name property which means the parent component can pass a value to `info.component.ts`. Name is a dynamically set property from the outside component. It is done like this:
 
 ```html
-<app-info [name]="'Luke Skywalker'"></app-info>
+<app-info [name]="'Han Solo'"></app-info>
 ```
 
 2. Describe [value] used in info.component.html
@@ -64,6 +64,9 @@ Initial application page
 ![](/activities/activity3/screenshots/initial_page.png)
 
 ---
+
+GCU Homepage
+![](/activities/activity3/screenshots/gcu.png)
 
 The create albums page
 ![](/activities/activity3/screenshots/create.png)
@@ -183,6 +186,24 @@ export class MusicServiceService {
 }
 
 ```
+##  About This Project
+
+**My Music Collection** is a front‑end Angular application built as part of CST‑391 Activity 3.  
+It demonstrates key Angular concepts including:
+
+- **Component‑based architecture** – multiple reusable components for artists, albums, and CRUD operations.
+- **Routing & navigation** – seamless transitions between views using Angular Router.
+- **Data binding & event handling** – dynamic UI updates in response to user actions.
+- **Mock data integration** – loads and displays album and artist information from a local JSON file.
+- **Bootstrap styling** – responsive, mobile‑friendly layout with a clean, modern look.
+
+Users can:
+- Browse a list of artists and their albums.
+- View detailed album information.
+- Create, edit, and delete albums.
+- Experience a structured, interactive UI that builds on concepts from earlier activities.
+
+This project expands on the foundational Angular skills introduced in Part 1, applying them to a richer, multi‑view application with real‑world patterns.
 
 ## Conclusion
 
