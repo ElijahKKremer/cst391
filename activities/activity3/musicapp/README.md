@@ -1,29 +1,89 @@
 # Activity 3
-## PART 2
+### Elijah Kremer
+### 20 Sep 25
+### CST391
+---
 
-### Executive Summary
+This README.md file is a combination of both READMEs for each application that was build for this activity. PART 1 is for the simpleapp and PART 2 is for the musicapp.
 
-This part of the activity is a front end application that implements multiple components and handles page events. It takes data from a json file and binds it to multiple views allowing the user to see the data and create new data for it to display. It expands on the ideas presented in the first part of the activity.
+## PART 1
+
+### Summary
+
+This application is a simple app to demonstrate how to use angular. It has a simple UI with two components, info and shop. These components show how to handle page events and make different components appear on a button press. It also shows how to set properties to components and how the UI can manipulate them, such as a text input field.
 
 ### Screenshots
 
 Initial application page
 ![](/activities/activity3/screenshots/initial_page.png)
 
-The GCU home page
-![](/activities/activity3/screenshots/Screenshot%202025-02-28%20163050.png)
+Bootstrap table using dev tools to show responsiveness at a small screen.
+![](/activities/activity3/screenshots/small_table.png)
+
+Bootstrap table using dev tools to show responsiveness at a large screen.
+![](/activities/activity3/screenshots/large_table.png)
+
+Application Page of the name form before name is entered
+![](/activities/activity3/screenshots/whatname.png)
+
+Application page after submitting the first form
+![](/activities/activity3/screenshots/name.png)
+
+Screenshot of the dev tools console after clicking buy.
+![](/activities/activity3/screenshots/quantity.png)
+
+
+### Research Questions
+
+1. Describe @Input decorator used in info.component.ts
+
+The @Input decorator in `info.component.ts` allows the component to receive data from its parent component. In the info component's case, it is used for the name property which means the parent component can pass a value to `info.component.ts`. Name is a dynamically set property from the outside component. It is done like this:
+
+```html
+<app-info [name]="'Luke Skywalker'"></app-info>
+```
+
+2. Describe [value] used in info.component.html
+
+The `[value]` in `info.component.ts` is a binding used in Angular to set an element's value dynamically. Take this for example: `<input [value]="selectedProduct">` The value of this input field is bound to the `selectedProduct` property in the component. When `selectedProduct` changes, the input field will updated automatically. Changes by the user to the input field won't update`selectedProduct` unless another binding method like `[(ngModel)]` is used.
+
+
+3. Describe [(ngModel)] also used in info.component.html
+
+The `[(ngModel)]` in `info.component.hmtl` enables two-way data binding. This means that changes in the UI will update the component property, and vice versa. Here is an example: `<input [(ngModel)]="quantity">`. This will bind the input field to the `quantity` property within the component. When a user types in a new value the property in the component will change and when the value is updated within the code then the UI will reflect those changes.
+
+## PART 2
+
+### Summary
+
+This portion of the activity focuses on developing a front‑end Angular application that integrates multiple components and manages user‑driven page events. It loads data from a JSON file and binds it across several views, enabling users to both explore existing records and add new entries for display. The work builds on the foundational concepts introduced in Part 1, extending them into a richer, more interactive interface.
+
+### Screenshots
+
+Initial application page
+![](/activities/activity3/screenshots/initial_page.png)
+
+---
 
 The create albums page
-![](/activities/activity3/screenshots/Screenshot%202025-02-28%20162930.png)
+![](/activities/activity3/screenshots/create.png)
+
+---
 
 Screenshot of the artist page showing the newly created artist
-![](/activities/activity3/screenshots/image.png)
+![](/activities/activity3/screenshots/newartist.png)
+
+---
 
 Screenshot of the new album on the albums page.
-![](/activities/activity3/screenshots/newAlbumPageImage.png)
+![](/activities/activity3/screenshots/newAlbum.png)
+
+---
 
 Screenshot of the alert box showing the version number.
 ![](/activities/activity3/screenshots/versionNumber.png)
+
+---
 
 ### Commented Code of Music Service File
 
@@ -123,3 +183,7 @@ export class MusicServiceService {
 }
 
 ```
+
+## Conclusion
+
+This activity offered practical, step‑by‑step experience in developing Angular applications, with an emphasis on component interaction, data binding, and event handling. In Part 1, we explored Angular fundamentals through a simple application that demonstrated passing data between components, updating the UI dynamically, and responding to user actions. Part 2 built on this foundation by creating a more sophisticated music application that incorporated JSON‑based mock data, multiple routed views, and full CRUD functionality for managing artists and albums.
