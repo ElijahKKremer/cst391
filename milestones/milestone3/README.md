@@ -3,7 +3,7 @@
 
 ## Property Management Application
 ### Author: Elijah Kremer
-### Date: 12 September 2025
+### Date: 27 September 2025
 ### Screencast URL: [Screencast](https://www.loom.com/share/26d1656b0ac945c08669e94e8096948f)
 
 ---
@@ -17,27 +17,7 @@ I've updated the REST API endpoints to accurately represent want is in the appli
 
 
 ### Instructor Feedback: 
-"Elijah, here's an update.  Thank you for meeting all requirements on this assignment. First thank you for using Markdown, a Developer's professional approach for documentation of software.
 
- 
-
-Requirements:  Provided an introduction explaining your final project proposal and listing the functional requirements and the Entity-Relationship Diagram explaining your backend database.
-
- 
-
-You also listed the Sitemap your pages that are going to be developed along with the  and the Wireframes of the component structure of your application.
-
- 
-
-There was a Class diagram showing the classes that will be developed.  Finally, the Risks about this project are also mentioned.
-
- 
-
-The only item I see missing is a Conclusion, please add a Conclusion.
-
- 
-
-Nicely done, Bobby"
 
 ---
 

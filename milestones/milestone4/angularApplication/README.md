@@ -2,24 +2,80 @@
 # CST-391 JavaScript Web Application Development
 
 ## Property Manager Application
-### Elijah Kremer
-### Date: 27 Sep 25
+### Author: Elijah Kremer
+### Date: 27 Sep 2025
+### Link to video: [Demo of Application](https://www.loom.com/share/57d5521c583f43fc93f866554e442ac9)
 ---
 
+### Introduction
+This application will be used to manage properties a person may own. For example, a real estate inventor may own up to 100 properties, including resident homes, apartment buildings, and commercial buildings. This application can be a singular place for the owner to manage rent payments, facility requests, see property details, track vacancy, and manage tenants. The scope for this project will include a front end to list a singular "product", which is a residential property in this case. There will also be support for all CRUD operations in which the application will be connected to a MySQL database. Users will need to create an account to log in and see their created properties.
+
+---
+
+
 #### UPDATES (Milestone 4)
-For this milestone there have been no major updates other than some UI changes, I wasn't able to update wireframes.  
+Design Report
+1. Overview
+This iteration of the application introduces a modular architecture with clearly defined components, services, and models. The goal is to ensure maintainability, scalability, and alignment between the backend API and Angular’s strongly typed frontend.
 
-A current issue is that when editing a estate in the angular application is automatically sets the owner id to 1 and not to the original owner.
+2. Added Feature Modules & Components
+- create-estate: Component for adding new estate records through a form-driven UI.
+- edit-estate: Component for updating existing estate details.
+- list-estate: Component for displaying all estates with integrated owner information.
+- list-owner-estates: Component for filtering and displaying estates by a specific owner.
 
-Link to video: [Demo of Application](https://youtu.be/a8EnKKYXsX8)
+3. Service Layer
+- estate-service.service.ts
+- Provides a centralized API integration layer.
+- Implements CRUD operations for both Users and Estates.
+- Encapsulates HTTP requests and ensures consistent error handling and callback execution.
 
-#### UPDATES (Milestone 3)
+4. Data Models
+- estates.model.ts
+- Defines the Estate interface, including a nested owner?: User property for type-safe owner references.
+- users.model.ts
+- Defines the User interface with fields such as id, firstName, lastName, email, phoneNumber, status, creationDate, and lastLoginDate.
+- Ensures consistent typing across the application and backend integration.
 
-I've updated the REST API endpoints to accurately represent want is in the application. Please take a look at the API Documentation file for the documentation on the API that was built for this milestone.
+5. Navigation
+- app.routes.ts
+- Configures routing for all feature modules, including estate creation, editing, listing, and owner-specific views.
+- app.component.html
+- Implements a Bootstrap-based navigation bar for intuitive access to core sections:
+- Home
+- List Estates
+- Pricing
+- About
+
+6. Home Page
+- home-page component
+- Serves as the landing page for the application.
+- Provides quick navigation to estate management features.
+
+7. Updates & Known Issues
+
+## Table Updates & Known Issues
+
+| Area / File                                      | Feature(s) Implemented                          | Status / Notes |
+|--------------------------------------------------|-------------------------------------------------|----------------|
+| `create-estate`, `edit-estate`, `list-estate`, `list-owner-estates` | CRUD components for estate management           | ✅ Implemented; UI validation and error handling in progress |
+| `estate-service.service.ts`                      | API integration for Users & Estates             | ✅ Functional; ensure backend normalization of field names |
+| `estates.model.ts`, `users.model.ts`             | Strongly typed data handling                    | ✅ Models aligned; backend must return camelCase keys |
+| `app.component.html` (NavBar)                    | Bootstrap navigation with routing               | ✅ Working; styling refinements possible |
+| `app.routes.ts`                                  | Route configuration                             | ✅ Routes defined; verify deep linking |
+| Backend Integration                              | Estate ↔ Owner relationship                     |  Owner links previously returned `undefined`; fixed by normalizing backend JSON |
+| `create-estate`, `edit-estate`                   | Form-driven CRUD operations                     |  Validation rules and error handling still in progress |
+
+---
+
+
+
+
+
+
 
 Currently there are no known issues. 
-#### Introduction
-This application will be used to manage properties a person may own. For example, a real estate inventor may own up to 100 properties, including resident homes, apartment buildings, and commercial buildings. This application can be a singular place for the owner to manage rent payments, facility requests, see property details, track vacancy, and manage tenants. The scope for this project will include a front end to list a singular "product", which is a residential property in this case. There will also be support for all CRUD operations in which the application will be connected to a MySQL database. Users will need to create an account to log in and see their created properties.
+
 #### Functional Requirements
 Here is a table of initial user stories for the project:
 
@@ -38,31 +94,24 @@ Here is a table of initial user stories for the project:
 
 #### Database Design
 Here is the ER diagram for my database:
-![[Pasted image 20250115160555.png]]
+![](../screenshots/ER1.png)
 
 #### UI Sitemap
 Here is a diagram of how the user will navigate the website:
-![[Pasted image 20250117125708.png]]
+![](../screenshots/UI1.png)
 
 #### UI Wireframes
 There are the low fidelity wireframes for all the pages in the application.
 
 ##### Home Page
-![](../../screenshots/Pasted%20image%2020250117114409.png)
-##### Login Page
-![](../../screenshots/Pasted%20image%2020250117114643.png)
-##### Register Page
-![](../../screenshots/Pasted%20image%2020250117114733.png)
+![](../../screenshots/home1.png)
 ##### Portfolio Page
-![](../../screenshots/Pasted%20image%2020250117114746.png)
+![](../../screenshots/portfolio.png)
 ##### Create Estate Page
-![](../../screenshots/Pasted%20image%2020250117114817.png)
+![](../../screenshots/create1.png)
 ##### Update Estate Page
-![](../../screenshots/Pasted%20image%2020250117114843.png)
-##### Account Page
-![](../../screenshots/Pasted%20image%2020250117114858.png)
-#### UML Diagrams
-![](../../screenshots/Pasted%20image%2020250117113958.png)
+![](../../screenshots/edit.png)
+
 
 
 #### Risks
