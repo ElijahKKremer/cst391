@@ -2,8 +2,8 @@
 # CST-391 JavaScript Web Application Development
 
 ## Property Manager Application
-### Author: Gavin Kuehn
-### Date: March 23, 2025
+### Elijah Kremer
+### Date: 27 Sep 25
 ---
 
 #### UPDATES (Milestone 4)
